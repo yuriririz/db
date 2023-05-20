@@ -16,15 +16,18 @@ class EditpageController extends Controller
     // index
     public function index(){
  
-        // $contentShow= Contents::all();
-        // return view('template.coures',compact('contentShow') );
-        $coureList=Coures::all();
-        return view('template.editpage');
+        $contentShow= Contents::all();
+        return view('template.editpage',compact('contentShow') );
+        // $coureList=Coures::all();
+        // return view('template.editpage');
     }
 
     // show template coures
 
-    public function show(){
+    public function destroy($id){
+
+        Contents::destroy($id);
+        return back();
 
         // $coureList=Coures::all();
         // return view('template.coures',compact('coureList'));
