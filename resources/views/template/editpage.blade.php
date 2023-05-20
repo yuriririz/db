@@ -23,6 +23,8 @@
     <thead>
       <tr>
         <th scope="col">ชื่อบทเรียน</th>
+        <th scope="col">ลิํงวิดีโอ</th>
+        <th scope="col">ข้อความ</th>
         <th scope="col">แก้ไข</th>
       </tr>
     </thead>
@@ -30,12 +32,14 @@
         @foreach ($contentShow as $i)
       <tr>
 
-        <td><a href="#">{{$i ->contentsname}}</a></td>
+        <td><a href="#">{{$i ->contentname}}</a></td>
+        <td><a href="#">{{$i ->video}}</a></td>
+        <td><a href="#">{{$i ->content_text}}</a></td>
 
         <td><button  type="button" class="btn btn-sm btn-outline-secondary">
             <a href="#" class="nav-link text-black">แก้ไข</a> 
           </button> 
-          <button  type="button" class="btn btn-sm btn-outline-secondary">
+          <button  type="submit" class="btn btn-sm btn-outline-secondary">
             <a href="#" class="nav-link text-black">ลบ</a> 
           </button>
         </td>
@@ -45,3 +49,4 @@
     </tbody>
   </table>
   @endsection
+  
