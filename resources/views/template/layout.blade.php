@@ -33,7 +33,8 @@
             @yield('quizAswer')
             @yield('aswer')
             @yield('editpage')
-            
+            @yield('editpagequestion')
+            @yield('editanswer')
 
 
         </div>

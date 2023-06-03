@@ -1,6 +1,6 @@
 @extends('template.layout')
 
-@section('editpage')
+@section('editpagequestion')
 <!-- <table class="table">
   <thead>
 
@@ -27,19 +27,17 @@
 <table class="table">
     <thead>
       <tr>
-        <th scope="col">ชื่อบทเรียน</th>
-        <th scope="col">ลิํงวิดีโอ</th>
-        <th scope="col">ข้อความ</th>
+        <th scope="col">คำถามแบบข้อความ</th>
+        <th scope="col">คำถามแบบวิดีโอ</th>
         <th scope="col">แก้ไข</th>
       </tr>
     </thead>
     <tbody>
-        @foreach ($contentShow as $i)
+        @foreach ($questionShow as $i)
       <tr>
 
-        <td><a href="#">{{$i ->contentname}}</a></td>
-        <td><a href="#">{{$i ->video}}</a></td>
-        <td><a href="#">{{$i ->content_text}}</a></td>
+        <td><a href="#">{{$i ->questionText}}</a></td>
+        <td><a href="#">{{$i ->questionVideo}}</a></td>
 
         <td><button  type="button" class="btn btn-sm btn-outline-secondary">
             <a href="#" class="nav-link text-black">แก้ไข</a> 

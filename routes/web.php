@@ -5,6 +5,8 @@ use App\Http\Controllers\CouresControllers;
 use App\Http\Controllers\ContentsController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\EditpageController;
+use App\Http\Controllers\EditpagequestionController;
+use App\Http\Controllers\EditanswerController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -47,3 +49,9 @@ Route::post('/addAnswer',[AnswerController::class,'store'])->name('creatanswer')
 
 //editpage
 Route::get('/showeditpage',[EditpageController::class,'index'])->name('showeditpage');
+
+//editpagequestion
+Route::get('/editpagequestion',[EditpagequestionController::class,'index'])->name('editpagequestion');
+
+//editpageanswers
+Route::get('/editanswer',[EditanswerController::class,'index'])->name('editanswer');
